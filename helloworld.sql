@@ -5,7 +5,7 @@ v$session.USERNAME, STATUS, OSUSER, MACHINE, v$session.PROGRAM, MODULE, action, 
 v$session.CLIENT_INFO,
 'alter system kill session ' || '''' || v$session.SID || ', ' || v$session.SERIAL# || '''' || ' immediate;' kill_sql
 FROM v$session, v$process
-WHERE v$session.paddr = v$process.addr and v$session.type = 'USER'
+WHERE v$session.paddr = v$process.addr and v$session.type = 'USER' and v$session.sid = 1234
 --AND v$process.spid = 23832
 --and v$session.process = '26432'
 --AND v$session.status = 'INACTIVE'
