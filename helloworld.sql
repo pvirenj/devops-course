@@ -1,3 +1,5 @@
+--added to facebook-int branch area
+
 SELECT DECODE(TRUNC(SYSDATE - LOGON_TIME), 0, NULL, TRUNC(SYSDATE - LOGON_TIME) || ' Days' || ' + ') ||
 TO_CHAR(TO_DATE(TRUNC(MOD(SYSDATE-LOGON_TIME,1) * 86400), 'SSSSS'), 'HH24:MI:SS') LOGON,
 v$session.SID, v$session.SERIAL#, v$process.SPID spid, v$session.process CLPRID,v$session.BLOCKING_SESSION_STATUS, v$session.BLOCKING_INSTANCE,v$session.BLOCKING_SESSION,
