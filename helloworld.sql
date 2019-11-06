@@ -12,7 +12,7 @@ WHERE v$session.paddr = v$process.addr and v$session.type = 'USER' and v$session
 --AND v$session.username LIKE '%KAPARELIS SPYROS%'
 --AND v$session.SID = 4392
 --and v$session.sid in (select sid from v$session where SADDR in (select session_addr from v$sort_usage)) --(v$temp_usage)
---and v$session.osuser like 'oracle%'
+and v$session.osuser like 'oracle%'
 --and osuser='uidea'
 --AND v$session.module LIKE '%qot%'
 --and v$session.machine like '%PLHROFORIK92%'
