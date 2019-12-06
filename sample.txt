@@ -1,0 +1,6 @@
+1. User must enter a file name.
+2. The file is opened using the open() function in the read mode.
+3.The readline() outside the while loop is used to read the first line of the file.
+4. Inside the loop, the first line is first printed and then the remaining lines are read and subsequently printed.
+5. This continues this the end of file.
+6. The file is then closed.
